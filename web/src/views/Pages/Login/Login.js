@@ -4,7 +4,7 @@ import './ValidationForms.css';
 import useForm from "./../../../hooks/useForm";
 import { AuthContext } from "./../../../context/index";
 import Captcha from "../../Base/Captcha/Captcha";
-const { isFormValid } = require("./../../../utils/validate");
+const { isFormValid } = require("./../../../utils/validateLogin");
 
 const initialValues = {
   email: "",
@@ -42,9 +42,7 @@ const Login = (props) => {
   }, [errors]);
 
   const submitForm = async () => {
-    debugger;
     const token = await login(values);
-    debugger;
     if (token !== "" || token !== "null") {
       if (!token.data.data.token) {
         setMsg('');
@@ -60,7 +58,6 @@ const Login = (props) => {
   }
 
   useEffect(() => {
-    debugger;
     if (token.data !== undefined)
       if (token.data.success) {
         props.history.push('/admin')

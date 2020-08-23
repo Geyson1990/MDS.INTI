@@ -52,7 +52,6 @@ class AuthProvider extends Component {
   authorize = async (values, keepLoggedIn) => {
     try {
       let loginToken = await loginRequest(values.email, values.password);
-      debugger;
       const storage = keepLoggedIn ? localStorage : sessionStorage;
       storage.setItem("token", JSON.stringify(loginToken.data.data));
 

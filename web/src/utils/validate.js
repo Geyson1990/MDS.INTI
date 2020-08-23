@@ -1,20 +1,21 @@
-const isFormValid = ({ email, password, captcha }) => {
-    const errors = {};
-  
-    if (email === "") {
-      errors.email = "El nombre de usuario es un campo requerido.";
+export default function validate(getValidationSchema) {
+    return (values) => {
+      const validationSchema = getValidationSchema(values)
+      try {
+        validationSchema.validateSync(values, { abortEarly: false })
+        return {}
+      } catch (error) {
+        return getErrorsFromValidationError(error)
+      }
     }
+  }
   
-    if (password === "") {
-      errors.password = "La contraseña es un campo requerido.";
-    }
-  
-    if(captcha===""){
-      errors.captcha = "Se requiere marcar el Captcha.";
-    }
-  
-    return errors;
-  };
-  
-  module.exports = { isFormValid };
-  
+  function getErrorsFromValidationError(validationError) {
+    const FIRST_ERROR = 0
+    return validationError.inner.reduce((errors, error) => {
+      return {
+        ...errors,
+        [error.path]: error.errors[FIRST_ERROR],
+      }
+    }, {})
+  }
