@@ -12,7 +12,7 @@ namespace MDS.Inventario.Api.DataAccess.UnitOfWork
 {
     public partial class UnitOfWork : BaseUnitOfWork, IUnitOfWork
     {
-        public async Task<IEnumerable<PersonalEntity>> ValidarUsuario(string usuario, string contrasenia)
+        public async Task<IEnumerable<UsuarioEntity>> ValidarUsuario(string usuario, string contrasenia)
         {
             var parm = new Parameter[] {
                 new Parameter("@USUARIO" , usuario),
@@ -21,7 +21,7 @@ namespace MDS.Inventario.Api.DataAccess.UnitOfWork
 
             try
             {
-                var result = this.ExecuteReader<PersonalEntity>(
+                var result = this.ExecuteReader<UsuarioEntity>(
                     "dbo.USP_MDS_INVENTARIO_USUARIO_VALIDO"
                     , CommandType.StoredProcedure
                     , ref parm

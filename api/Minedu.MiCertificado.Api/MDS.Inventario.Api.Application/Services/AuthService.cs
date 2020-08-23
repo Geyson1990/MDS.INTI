@@ -53,14 +53,14 @@ namespace MDS.Inventario.Api.Application.Services
                 // 1. Validar el usuario
                 var responseUsuario = await _unitOfWork.ValidarUsuario(request.NombreUsuario, request.Contrasenia);
 
-                if (responseUsuario == null)
+                if (responseUsuario.Count() == 0)
                 {
                     response.Data = null;
                     response.Success = false;
                     response.Messages.Add("Usuario no Autorizado");
                     return response;
                 }
-                var usuario = responseUsuario.Select(x => PersonalMapper.Map(x)).FirstOrDefault();
+                var usuario = responseUsuario.Select(x => UsuarioMapper.Map(x)).FirstOrDefault();
 
                 #region TOKEN_CERTIFICADO
                 //Encapsular token de Siagie en token de Certificado

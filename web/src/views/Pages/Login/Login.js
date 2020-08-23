@@ -45,21 +45,23 @@ const Login = (props) => {
     debugger;
     const token = await login(values);
     debugger;
-    if (!token.data.data.token) {
-      setMsg('');
-      setShow(false);
+    if (token !== "" || token !== "null") {
+      if (!token.data.data.token) {
+        setMsg('');
+        setShow(false);
 
-    } else {
-      values.email = "";
-      values.password = "";
-      setMsg(token.data.messages[0]);
-      setShow(true);
+      } else {
+        values.email = "";
+        values.password = "";
+        setMsg(token.data.messages[0]);
+        setShow(true);
+      }
     }
   }
 
   useEffect(() => {
     debugger;
-    if (token !== "")
+    if (token.data !== undefined)
       if (token.data.success) {
         props.history.push('/admin')
       }

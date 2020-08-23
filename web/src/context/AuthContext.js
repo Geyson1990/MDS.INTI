@@ -17,8 +17,8 @@ const initialState = {
 
 const initialContext = {
   ...initialState,
-  login: () => {},
-  logout: () => {}
+  login: () => { },
+  logout: () => { }
 };
 
 const AuthContext = React.createContext(initialContext);
@@ -54,7 +54,7 @@ class AuthProvider extends Component {
       let loginToken = await loginRequest(values.email, values.password);
       debugger;
       const storage = keepLoggedIn ? localStorage : sessionStorage;
-      storage.setItem("token", loginToken.data.data.token);
+      storage.setItem("token", JSON.stringify(loginToken.data.data));
 
       return loginToken;
     } catch (ex) {
