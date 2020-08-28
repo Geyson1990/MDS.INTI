@@ -3,39 +3,17 @@ import { Table } from 'reactstrap';
 import TableHeader from './TableHeader';
 import TableData from './TableData';
 
-const GridBase = (datos, meta) => {
+const GridBase = ({datos, meta, edit, eliminar}) => {
     const [headerMeta, setHeaderMeta] = useState(meta);
     const [tableData, setTableData] = useState([]);
-    const [sortBy, setSortBy] = useState({ key: null, order: '>' });
-    const data = datos.length!==undefined ? datos.map((d, id) => ({ ...d, id })): [];
     
-    const compare = {
-        '>': (d1, d2) => d1 > d2,
-        '<': (d1, d2) => d1 < d2,
-    };
-
-    const normalizeData = (data) => {
-        return data.map(td => {
-            const keys = Object.keys(td);
-            return keys.map(key => ({ key, text: td[key] }));
-        });
-    };
-
-    useEffect(() => {
-        // normalize data
-        setTableData(normalizeData(data), meta);
-    }, []);
-
-    useEffect(() => {
-        // sort
-        setTableData(normalizeData(data.sort((d1, d2) => compare[sortBy.order](d1[sortBy.key], d2[sortBy.key]))));
-    }, [sortBy])
+    //const data = datos.length!==undefined ? datos.map((d, id) => ({ ...d, id })): [];
 
     return (
-        <div className="container">
-            <Table>
-                <TableHeader headers={headerMeta} />
-                <TableData data={tableData} meta={meta} />
+        <div>
+            <Table hover bordered striped responsive size="sm">
+                <TableHeader key={1} headers={headerMeta} />
+                <TableData key={2} data={datos} meta={meta} edit={edit} eliminar={eliminar}/>
             </Table>
         </div>
     );

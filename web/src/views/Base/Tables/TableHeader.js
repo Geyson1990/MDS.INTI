@@ -3,10 +3,12 @@ import TableCell from './TableCell';
 
 const TableHeader = ({ headers }) => {
     return (
-        <thead className="table-row">
-            {
-                headers.map((d) => <TableCell data={d} />)
-            }
+        <thead key={1}>
+            <tr>
+                {
+                    headers.map((d, i) => <TableCell key={i} data={d} index={i} header={true} />)
+                }
+            </tr>
         </thead>
     )
 }

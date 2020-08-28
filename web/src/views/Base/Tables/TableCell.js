@@ -1,9 +1,9 @@
 import React from 'react';
-const TableCell = ({ data }) => {
+const TableCell = ({ data, index, header }) => {
     return (
-        <td className="table-cell" onClick={data.sortFunc}>
-            {data.text}
-        </td>
+        header ?
+            (<th key={index}>{data.text}</th>) :
+            (<td key={index}>{data.text}</td>)
     )
 }
 
