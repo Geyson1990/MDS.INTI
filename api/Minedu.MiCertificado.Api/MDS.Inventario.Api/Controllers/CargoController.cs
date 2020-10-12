@@ -26,7 +26,8 @@ namespace MDS.Inventario.Api.Controllers
         // POST: api/Cargo/insertar
         [HttpPost("insertar", Name = "PostInsertar")]
         [Produces("application/json", Type = typeof(StatusResponse))]
-        public async Task<IActionResult> PostInsertar([FromBody] Models.Helpers.ParametroHelper encryptedRequest)
+        //public async Task<IActionResult> PostInsertar([FromBody] Models.Helpers.ParametroHelper encryptedRequest)
+        public async Task<IActionResult> PostInsertar([FromBody] Models.CargoExtends encryptedRequest)
         {
             var response = await _cargoService.Insertar(encryptedRequest);
 

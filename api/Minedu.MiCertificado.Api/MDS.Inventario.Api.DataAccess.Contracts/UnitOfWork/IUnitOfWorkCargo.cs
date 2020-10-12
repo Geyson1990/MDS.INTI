@@ -7,6 +7,6 @@ namespace MDS.Inventario.Api.DataAccess.Contracts.UnitOfWork
 {
     public partial interface IUnitOfWork : IBaseUnitOfWork
     {
-        Task<int> Insertar(CargoEntity request);
+        Task<int> InsertarCargo(CargoEntity request);
     }
 }

@@ -46,12 +46,12 @@ namespace MDS.Inventario.Api.Application.Services
         public async Task<StatusResponse> Login(Models.Helpers.ParametroHelper objetoEncriptado)
         {
             var response = new StatusResponse();
-            var desencriptarObjeto = ReactEncryptationSecurity.Decrypt<string>(objetoEncriptado.parametros, "");
+            /*var desencriptarObjeto = ReactEncryptationSecurity.Decrypt<string>(objetoEncriptado.parametros, "");
             var request = JsonConvert.DeserializeObject<Models.UsuarioExtends>(desencriptarObjeto);
             try
             {
                 // 1. Validar el usuario
-                var responseUsuario = await _unitOfWork.ValidarUsuario(request.NombreUsuario, request.Contrasenia);
+                var responseUsuario = null;// await _unitOfWork.ValidarUsuario(request.NombreUsuario, request.Contrasenia);
 
                 if (responseUsuario.Count() == 0)
                 {
@@ -106,7 +106,7 @@ namespace MDS.Inventario.Api.Application.Services
                 response.Data = null;
                 response.Success = false;
                 response.Messages.Add("Error general:" + ex);
-            }
+            }*/
             return response;
 
         }

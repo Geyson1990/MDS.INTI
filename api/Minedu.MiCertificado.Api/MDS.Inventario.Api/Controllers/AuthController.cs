@@ -23,14 +23,14 @@ namespace MDS.Inventario.Api.Controllers
 
         //OK-S
         // POST: api/auth/auth
-        [HttpPost("auth", Name = "GetLogin")]
+        /*[HttpPost("auth", Name = "GetLogin")]
         [Produces("application/json", Type = typeof(StatusResponse))]
         public async Task<IActionResult> GetLogin([FromBody] Models.Helpers.ParametroHelper encryptedRequest)
         {
-            var response = await _authService.Login(encryptedRequest);
+            var response = 2;// await _authService.Login(encryptedRequest);
 
             return Ok(response);
-        }
+        }*/
         
     }
 }
