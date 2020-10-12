@@ -6,6 +6,6 @@ namespace MDS.Inventario.Api.Application.Contracts.Services
 {
     public interface IAuthService
     {
-        Task<StatusResponse> Login(Models.Helpers.ParametroHelper objetoEncriptado);
+        //Task<StatusResponse> Login(Models.Helpers.ParametroHelper objetoEncriptado);
     }
 }

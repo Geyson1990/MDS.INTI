@@ -42,14 +42,15 @@ namespace MDS.Inventario.Api.Application.Services
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public async Task<StatusResponse> Insertar(Models.Helpers.ParametroHelper objetoEncriptado)
+        //public async Task<StatusResponse> Insertar(Models.Helpers.ParametroHelper objetoEncriptado)
+        public async Task<StatusResponse> Insertar(Models.CargoExtends objetoEncriptado)
         {
             var response = new StatusResponse();
-            var request = JsonConvert.DeserializeObject<Models.CargoExtends>(ReactEncryptationSecurity.Decrypt<string>(objetoEncriptado.parametros, ""));
+            //var request = JsonConvert.DeserializeObject<Models.CargoExtends>(ReactEncryptationSecurity.Decrypt<string>(objetoEncriptado.parametros, ""));
             
             try
             {
-                var consulta = await _unitOfWork.Insertar(Mappers.CargoMapper.Map(request));
+                var consulta = await _unitOfWork.InsertarCargo(Mappers.CargoMapper.Map(objetoEncriptado));
                 if(consulta > 0)
                 {
                     response.Data = consulta;

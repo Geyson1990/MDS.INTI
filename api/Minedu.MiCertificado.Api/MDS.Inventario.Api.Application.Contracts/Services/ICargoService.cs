@@ -6,6 +6,6 @@ namespace MDS.Inventario.Api.Application.Contracts.Services
 {
     public interface ICargoService
     {
-        Task<StatusResponse> Insertar(Models.Helpers.ParametroHelper objetoEncriptado);
+        Task<StatusResponse> Insertar(Models.CargoExtends objetoEncriptado);
     }
 }

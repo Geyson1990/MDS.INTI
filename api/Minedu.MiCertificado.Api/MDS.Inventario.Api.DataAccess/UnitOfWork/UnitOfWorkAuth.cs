@@ -12,7 +12,7 @@ namespace MDS.Inventario.Api.DataAccess.UnitOfWork
 {
     public partial class UnitOfWork : BaseUnitOfWork, IUnitOfWork
     {
-        public async Task<IEnumerable<UsuarioEntity>> Insertar(string usuario, string contrasenia)
+        /*public async Task<IEnumerable<UsuarioEntity>> Insertar(string usuario, string contrasenia)
         {
             var parm = new Parameter[] {
                 new Parameter("@USUARIO" , usuario),
@@ -33,7 +33,7 @@ namespace MDS.Inventario.Api.DataAccess.UnitOfWork
             {
                 throw;
             }
-        }
+        }*/
 
     }
 }

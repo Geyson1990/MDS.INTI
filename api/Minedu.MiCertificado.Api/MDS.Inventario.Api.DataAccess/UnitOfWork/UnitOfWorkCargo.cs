@@ -12,7 +12,7 @@ namespace MDS.Inventario.Api.DataAccess.UnitOfWork
 {
     public partial class UnitOfWork : BaseUnitOfWork, IUnitOfWork
     {
-        public async Task<int> Insertar(CargoEntity request)
+        public async Task<int> InsertarCargo(CargoEntity request)
         {
             var parm = new Parameter[] {
                 //new Parameter ({PARAMETRO_DEL_PROCEDIMIENTO_ALMACENADO},{VARIABLE DEL MÈTODO})
