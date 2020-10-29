@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Class1.csExceptionMiddlewareExtensions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MuniSayan.Application.Contracts\MuniSayan.Application.Contracts.csproj" />
+    <ProjectReference Include="..\MuniSayan.Application\MuniSayan.Application.csproj" />
+    <ProjectReference Include="..\MuniSayan.DataAccess\MuniSayan.DataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Minedu.Comun.Data">
+      <HintPath>..\MuniSayan.Libs\Minedu.Comun.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Minedu.Comun.IData">
+      <HintPath>..\MuniSayan.Libs\Minedu.Comun.IData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
