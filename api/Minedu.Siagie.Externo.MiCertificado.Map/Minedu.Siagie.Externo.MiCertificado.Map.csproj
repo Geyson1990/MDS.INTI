@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Minedu.Siagie.Externo.MiCertificado.Application\Minedu.Siagie.Externo.MiCertificado.Application.csproj" />
+    <ProjectReference Include="..\Minedu.Siagie.Externo.MiCertificado.Domain\Minedu.Siagie.Externo.MiCertificado.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

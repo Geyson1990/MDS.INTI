@@ -30,26 +30,6 @@ export default {
     },
     {
       title: true,
-      name: 'Maestros',
-      wrapper: {
-        element: '',
-        attributes: {},
-      },
-    },
-    {
-      name: 'Personal',
-      url: '/personal',
-      icon: 'icon-puzzle',
-      children: [
-        {
-          name: 'Personal',
-          url: '/maestro/personal',
-          icon: 'icon-puzzle',
-        },
-      ]
-    },
-    {
-      title: true,
       name: 'Components',
       wrapper: {
         element: '',

@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{25C2E068-4A05-44B1-9811-BCE4A7EC8541}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{1F142CA3-5150-4CD1-8082-C2C298F4E03B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F3E60D8D-B046-46AE-97F6-041C4A36685D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{20295354-21AB-4462-92AA-36D98C4422BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minedu.Siagie.Externo.MiCertificado.Data", "Minedu.Siagie.Externo.MiCertificado.Data\Minedu.Siagie.Externo.MiCertificado.Data.csproj", "{26450B59-DA69-4D6F-B4DE-D4BBC8C08C5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minedu.Siagie.Externo.MiCertificado.Domain", "Minedu.Siagie.Externo.MiCertificado.Domain\Minedu.Siagie.Externo.MiCertificado.Domain.csproj", "{007ADBF3-662D-4084-8698-4D1C0E77A593}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minedu.Siagie.Externo.MiCertificado.Application", "Minedu.Siagie.Externo.MiCertificado.Application\Minedu.Siagie.Externo.MiCertificado.Application.csproj", "{92958390-8B8F-4C3B-A8FE-B17192C63672}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minedu.Siagie.Externo.MiCertificado.Map", "Minedu.Siagie.Externo.MiCertificado.Map\Minedu.Siagie.Externo.MiCertificado.Map.csproj", "{31086702-5A66-4BF4-B73D-215C055EFF64}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minedu.Siagie.Externo.MiCertificado.Api", "Minedu.Siagie.Externo.MiCertificado.Api\Minedu.Siagie.Externo.MiCertificado.Api.csproj", "{25D6B48F-D049-402B-8BEC-3659B52DBC0E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minedu.Siagie.Externo.MiCertificado.Enumerado", "Minedu.Siagie.Externo.MiCertificado.Enumerado\Minedu.Siagie.Externo.MiCertificado.Enumerado.csproj", "{B9D0CC2C-D15F-47EB-9E22-B079B54FD0BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minedu.Siagie.Externo.MiCertificado.Dto", "Minedu.Siagie.Externo.MiCertificado.Dto\Minedu.Siagie.Externo.MiCertificado.Dto.csproj", "{E8C57DFF-687D-4473-8B72-1F2F1C868FF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26450B59-DA69-4D6F-B4DE-D4BBC8C08C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26450B59-DA69-4D6F-B4DE-D4BBC8C08C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26450B59-DA69-4D6F-B4DE-D4BBC8C08C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26450B59-DA69-4D6F-B4DE-D4BBC8C08C5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{007ADBF3-662D-4084-8698-4D1C0E77A593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{007ADBF3-662D-4084-8698-4D1C0E77A593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{007ADBF3-662D-4084-8698-4D1C0E77A593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{007ADBF3-662D-4084-8698-4D1C0E77A593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92958390-8B8F-4C3B-A8FE-B17192C63672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92958390-8B8F-4C3B-A8FE-B17192C63672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92958390-8B8F-4C3B-A8FE-B17192C63672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92958390-8B8F-4C3B-A8FE-B17192C63672}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31086702-5A66-4BF4-B73D-215C055EFF64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31086702-5A66-4BF4-B73D-215C055EFF64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31086702-5A66-4BF4-B73D-215C055EFF64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31086702-5A66-4BF4-B73D-215C055EFF64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25D6B48F-D049-402B-8BEC-3659B52DBC0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25D6B48F-D049-402B-8BEC-3659B52DBC0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25D6B48F-D049-402B-8BEC-3659B52DBC0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25D6B48F-D049-402B-8BEC-3659B52DBC0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9D0CC2C-D15F-47EB-9E22-B079B54FD0BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9D0CC2C-D15F-47EB-9E22-B079B54FD0BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9D0CC2C-D15F-47EB-9E22-B079B54FD0BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9D0CC2C-D15F-47EB-9E22-B079B54FD0BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8C57DFF-687D-4473-8B72-1F2F1C868FF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8C57DFF-687D-4473-8B72-1F2F1C868FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8C57DFF-687D-4473-8B72-1F2F1C868FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8C57DFF-687D-4473-8B72-1F2F1C868FF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{26450B59-DA69-4D6F-B4DE-D4BBC8C08C5C} = {F3E60D8D-B046-46AE-97F6-041C4A36685D}
+		{007ADBF3-662D-4084-8698-4D1C0E77A593} = {20295354-21AB-4462-92AA-36D98C4422BB}
+		{92958390-8B8F-4C3B-A8FE-B17192C63672} = {25C2E068-4A05-44B1-9811-BCE4A7EC8541}
+		{31086702-5A66-4BF4-B73D-215C055EFF64} = {1F142CA3-5150-4CD1-8082-C2C298F4E03B}
+		{B9D0CC2C-D15F-47EB-9E22-B079B54FD0BD} = {1F142CA3-5150-4CD1-8082-C2C298F4E03B}
+		{E8C57DFF-687D-4473-8B72-1F2F1C868FF6} = {1F142CA3-5150-4CD1-8082-C2C298F4E03B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D61A755E-5AE5-4EC2-BB06-36DABADBD69B}
+	EndGlobalSection
+EndGlobal
